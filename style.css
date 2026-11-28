@@ -11,8 +11,8 @@ body {
   --secondary-color: #ddd;
 }
 
-nav {
-  background-color: #1a1a1a;
+nav, footer {
+  
   height: 4rem;
   width: 100%;
   justify-content: center;
@@ -81,35 +81,9 @@ nav a:hover {
   transition: 1.2s;
 }
 
-.info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 4rem 2rem;
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("info.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    
-    margin-bottom: 4rem;
-}
 
-.info-title {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  border-bottom: 2px solid var(--primary-color);
-  width: max-content;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
+
+
 
 .container {
   max-width: 85%;
@@ -119,10 +93,9 @@ ul {
 .uber-uns {
   display: flex;
   justify-content: center;
-
   flex-direction: column;
-
   padding: 4rem 2rem;
+  margin-bottom: 4rem;
 }
 
 .uber-uns {
@@ -131,15 +104,15 @@ ul {
   
 }
 
-.uber-uns-title {
-  margin-bottom: 2rem 0 1rem 0;
+.header{
+  margin-bottom: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
   border-bottom: 2px solid var(--primary-color);
   width: max-content;
 }
 
-.uber-uns-text {
+.subtext{
   font-size: 1rem;
   line-height: 1.5rem;
   margin-bottom: 2rem;
@@ -175,14 +148,61 @@ ul {
 
 }
 
-/*
+
+.info-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("info.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    width: 100%;
+    
+   
+}
+
+
+
+.hours  {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem; 
+
+}
+
+.info .header{
+
+    margin: 0 auto;
+}
+
+.std{
+display: flex;
+ color: var(--secondary-color);
+  justify-content:space-between;
+  width: 15rem;
+
+
+
+}
+
 footer {
-  background-color: #000000;
+  
+
+  
   color: white;
   text-align: center;
-  padding: 1rem;
+ padding: -2rem 0 2rem 0;
+  
 }
-*/
+
 @media only screen and (min-width: 600px) {
   nav {
     gap: 2rem;

@@ -8,6 +8,7 @@ body {
   color: white;
 
   --primary-color: #ff3030;
+  --secondary-color: #ddd;
 }
 
 nav {
@@ -57,9 +58,13 @@ nav a:hover {
 .hero-subtext {
   font-size: 1.2rem;
   margin-top: 1rem;
+  color: var(--secondary-color);
 }
 
 .hero-button {
+  margin-top: 4rem;
+}
+.button {
   background-color: var(--primary-color);
   color: white;
   padding: 1rem 2rem;
@@ -67,12 +72,12 @@ nav a:hover {
   text-decoration: none;
   font-size: 1.5rem;
   border-radius: 50px;
-  margin-top: 4rem;
   border: 2px solid var(--primary-color);
+  width: max-content;
+  display: inline-block;
 }
-.hero-button:hover {
+.button:hover {
   background: none;
-
   transition: 1.2s;
 }
 
@@ -83,15 +88,91 @@ nav a:hover {
   flex-direction: column;
   text-align: center;
   padding: 4rem 2rem;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("info.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    
+    margin-bottom: 4rem;
+}
+
+.info-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-bottom: 2px solid var(--primary-color);
+  width: max-content;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
 }
 
 .uber-uns {
   display: flex;
   justify-content: center;
-  align-items: center;
+
   flex-direction: column;
-  text-align: center;
+
   padding: 4rem 2rem;
+}
+
+.uber-uns {
+  display: grid;
+  gap: 2rem;
+  
+}
+
+.uber-uns-title {
+  margin-bottom: 2rem 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  border-bottom: 2px solid var(--primary-color);
+  width: max-content;
+}
+
+.uber-uns-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 2rem;
+  color: var(--secondary-color);
+}
+
+.about-img {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  
+}
+
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.about-image-large{
+
+    min-width: 50%;
+}
+
+
+.about-img-klein {
+  display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: 100%;
+
 }
 
 /*
@@ -117,12 +198,24 @@ footer {
     font-size: 1.5rem;
   }
 
-  .hero-button {
+  .button {
     padding: 1.5rem 3rem;
+  }
+  .uber-uns-text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 }
 
 @media only screen and (min-width: 1000px) {
+
+.uber-uns{
+    grid-template-columns: 1fr 1fr ;
+    margin-top: 4rem;
+    align-items: center;
+}
+
+
   nav {
     gap: 5rem;
     font-size: 1.5rem;
@@ -137,7 +230,17 @@ footer {
     font-size: 2rem;
   }
 
-  .hero-button {
+  .button {
     padding: 2rem 4rem;
   }
+  .uber-uns-title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+
+
+    .container {
+        max-width: 1200px;
 }
